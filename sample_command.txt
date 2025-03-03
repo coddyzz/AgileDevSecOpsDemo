@@ -1,0 +1,2 @@
+>python main.py -m all -d "{ \"Employees\": \"name name\"}" -e zhouzhi1995@hotmail.com --> True
+main.exe -m all -d "{ \"Employees\": \"name name\"}" -e zhouzhi1995@hotmail.com
