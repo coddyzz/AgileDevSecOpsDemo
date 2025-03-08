@@ -3,9 +3,12 @@ import numpy as np
 import pandas as pd
 from source import ai_fraud_detection_model
 
-sample_data = pd.DataFrame([[2829,1000,100,7123259,50,'2025-02-22T14:26:00Z',N,Low risk,'192.168.1.1','SG','N']])
+sample_data = pd.read_csv('test_data.csv')
 
 def return_test():
 	assert ai_fraud_detection_model(sample_data)
 
-		
+def consistent_test():
+	result = sample_data.apply(lambda x: ai_fraud_detection_model(x), axis=1)
+	result2 = sample_data.apply(lambda x: ai_fraud_detection_model(x), axis=1)
+	assert result.equals(result2)
