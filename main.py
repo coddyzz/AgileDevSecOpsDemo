@@ -1,5 +1,4 @@
 import argparse
-# import json
 from utils import *
 
 def bandguardAI(method, data,target_email):
@@ -7,16 +6,16 @@ def bandguardAI(method, data,target_email):
 	if method == 'all':
 		is_threat = threat_identification(data)
 		threat_cate, threat_level = threat_classification(data,is_threat)
-		threat_notifications(data,is_threat,threat_cate,threat_level,target_email)
+		return threat_notifications(data,is_threat,threat_cate,threat_level,target_email)
 
-	elif method == 'identification':
+
+	if method == 'identification':
 		return threat_identification(data)
 
-	elif method == 'classification':
+	if method == 'classification':
 		return threat_classification(data,is_threat)
 
-	else:
-		raise "no such method"
+	return raise "no such method"
 
 
 if __name__ == "__main__":
