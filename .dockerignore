@@ -1,0 +1,60 @@
+# .dockerignore file for the project
+
+# General patterns
+.git/
+.gitignore
+.gitattributes
+
+# Python-specific patterns
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+
+# Development artifacts
+.idea/
+.vscode/
+*.swp
+*.swo
+dist/
+build/
+out/
+
+# Test files
+test/
+tests/
+*_test.go
+
+# Environment and secrets
+.env*
+*.env
+*.pem
+*.key
+*.crt
+config.local.*
+*.local.yml
+
+# Project-specific patterns
+docs/
+*.md
+README*
+Dockerfile*
+docker-compose*
+tmp/
+temp/
+*.tmp
+.local/
+local/
+
+# Exclude specific directories and files not needed for the containerized services
+api/
+pair programing demo/test.py
+pair programing demo/test_data.csv
+
+# Include necessary files for the services
+!cli/
+!cli/main.py
+!cli/utils.py
+!pair programing demo/
+!pair programing demo/source.py

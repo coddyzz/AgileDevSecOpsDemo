@@ -1,0 +1,22 @@
+[project]
+name = "bankguardai"
+version = "0.2.4"
+description = "Bank Guard AI backend"
+authors = [
+    {name = "ZZ", email = "zhi.zhou.2023@mitb.smu.edu.sg" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask (>=3.1.0,<4.0.0)",
+    "openai (>=1.68.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+version = "2.0"
+package-mode = false

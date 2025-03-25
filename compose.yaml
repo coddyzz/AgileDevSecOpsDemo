@@ -1,0 +1,20 @@
+services:
+  cli:
+    build:
+      context: ./cli
+      dockerfile: ./cliDockerfile
+    restart: unless-stopped
+    init: true
+    entrypoint: ["python", "cli/main.py"]
+    # env_file: ./.env  # Uncomment if .env file exists
+  pair_programing_demo:
+    build:
+      context: ./pair programing demo
+      dockerfile: ./pair programing demoDockerfile
+    restart: unless-stopped
+    init: true
+    command: ["python", "source.py"]
+    # env_file: ./.env  # Uncomment if .env file exists
+networks:
+  default:
+    driver: bridge
