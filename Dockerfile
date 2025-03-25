@@ -43,4 +43,4 @@ USER appuser
 RUN python -m pip install -r requirement.txt
 EXPOSE 5000
 # Set entrypoint
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["python","-m", "streamlit","run", "web_gui.py", "--server.port","5000"]
