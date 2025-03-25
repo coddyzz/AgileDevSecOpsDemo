@@ -11,7 +11,7 @@ def data_treatment(data):
 def ai_threat_identification(data):
 
 	pred_data = data_treatment(data)
-	if pred_data[0] != '7':
+	if pred_data[0] in '1234567890':
 		return True
 
 	return False
